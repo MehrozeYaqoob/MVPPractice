@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.practice.mvppractice.activity.MainPresenter" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="com.practice.mvppractice.activity.MainActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <Button
+            style="@style/ButtonStyle.ButtonSignIn"
+            android:onClick="@{presenter::handleSignInButton}"
+            />
+
+        <Button
+            style="@style/ButtonStyle.ButtonSignUp"
+            android:onClick="@{presenter::handleSignUpButton}"
+            />
+
+
+    </LinearLayout>
+</layout>
